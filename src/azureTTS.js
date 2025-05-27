@@ -79,7 +79,7 @@ export async function speakText(text, language = 'en-US') {
   const processedText = preprocessTextForTTS(text);
   console.log(`Processing text for TTS (${language}): ${processedText.substring(0, 50)}...`);
   
-  const BACKEND_TTS_URL = import.meta.env.VITE_BACKEND_TTS_URL || 'http://localhost:3000/api/tts/speak';
+  const BACKEND_TTS_URL = import.meta.env.VITE_BACKEND_TTS_URL; //|| 'http://localhost:3000/api/tts/speak';
   const textChunks = splitTextIntoChunks(processedText);
   const audioQueue = [];
   let currentChunkIndex = 0;

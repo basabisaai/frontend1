@@ -1090,7 +1090,7 @@ const handleSendClick = () => {
 
           {/* 🔥 NOTIFIKASI LIMIT TOKEN DITAMBAHKAN DI SINI 🔥 */}
   {tokenLimitReached && (
-    <div className="absolute top-[56px] md:top-0 left-0 right-0 z-50 flex justify-center">
+    <div className="absolute top-0 left-0 right-0 z-50 flex justify-center">
       <div className="w-full md:max-w-[900px] bg-blue-50 border-b border-blue-500 text-blue-800 px-4 py-3 shadow-md">
         <p className="text-sm md:text-base leading-relaxed text-center">
           Hey, thanks for the hustle! 😎 You've hit your token limit.

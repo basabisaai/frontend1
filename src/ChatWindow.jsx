@@ -292,7 +292,7 @@ useEffect(() => {
    // Check if a message's language is supported
   const checkMessageLanguage = async (text, messageId) => {
     try {
-      const DETECT_URL = import.meta.env.VITE_BACKEND_LANG_URL || 'http://localhost:3000/api/langdetect';
+      const DETECT_URL = import.meta.env.VITE_BACKEND_LANG_URL; //|| 'http://localhost:3000/api/langdetect';
       const response = await fetch(DETECT_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -389,7 +389,7 @@ const simulateTyping = (message) => {
   // Detect input language
   const detectLanguage = async (text) => {
     try {
-      const DETECT_URL = import.meta.env.VITE_BACKEND_LANG_URL || 'http://localhost:3000/api/langdetect';
+      const DETECT_URL = import.meta.env.VITE_BACKEND_LANG_URL; //|| 'http://localhost:3000/api/langdetect';
       const response = await fetch(DETECT_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -513,7 +513,7 @@ const simulateTyping = (message) => {
         // Create a new AbortController
     
         
-        const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3000/api/ai/tutor';
+        const BACKEND_URL = import.meta.env.VITE_BACKEND_URL; //|| 'http://localhost:3000/api/ai/tutor';
         console.log("Content being sent to backend AI Tutor zz:", input);
 
         const response = await fetch(BACKEND_URL, {
@@ -682,7 +682,7 @@ if (error) {
 
     abortControllerRef.current = new AbortController();
     const signal = abortControllerRef.current.signal;
-    const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3000/api/ai/tutor';
+    const BACKEND_URL = import.meta.env.VITE_BACKEND_URL; //|| 'http://localhost:3000/api/ai/tutor';
     console.log("Content being sent to backend AI Tutor:", content);
       const response = await fetch(BACKEND_URL, {
       method: 'POST',

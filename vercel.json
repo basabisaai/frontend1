@@ -4,7 +4,6 @@
       "NODE_ENV": "production"
     }
   },
-  "functions": {},
   "routes": [],
   "installCommand": "npm install",
   "buildCommand": "npm run build",
